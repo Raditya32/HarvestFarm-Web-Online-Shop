@@ -13,9 +13,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::view('beranda', 'beranda')
+Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
-    ->name('beranda');
+    ->name('dashboard');
 
 Route::get('/riwayat', [RiwayatController::class, 'index'])
     ->middleware(['auth', 'verified'])

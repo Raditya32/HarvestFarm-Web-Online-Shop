@@ -10,7 +10,7 @@
 
         <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
 
-        <a href="{{ route('beranda') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0"
+        <a href="{{ route('dashboard') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0"
             wire:navigate>
             <x-app-logo />
         </a>
@@ -32,8 +32,8 @@
         </a>
 
         <flux:navbar class="-mb-px max-lg:hidden">
-            <flux:navbar.item icon="layout-grid" :href="route('beranda')" :current="request() - > routeIs('beranda')"
-                wire:navigate>
+            <flux:navbar.item icon="layout-grid" :href="route('dashboard')"
+                :current="request() - > routeIs('dashboard')" wire:navigate>
                 {{ __('Beranda') }}
             </flux:navbar.item>
         </flux:navbar>
@@ -109,7 +109,7 @@
     <flux:sidebar stashable sticky class="lg:hidden border-e border-zinc-200 bg-zinc-50">
         <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
-        <a href="{{ route('beranda') }}" class="ms-1 flex items-center space-x-2 rtl:space-x-reverse" wire:navigate>
+        <a href="{{ route('dashboard') }}" class="ms-1 flex items-center space-x-2 rtl:space-x-reverse" wire:navigate>
             <x-app-logo />
         </a>
         <a href="{{ route('products.read') }}" class="ms-1 flex items-center space-x-2 rtl:space-x-reverse"
@@ -125,8 +125,8 @@
 
         <flux:navlist variant="outline">
             <flux:navlist.group :heading="__('Platform')">
-                <flux:navlist.item icon="layout-grid" :href="route('beranda')"
-                    :current="request() - > routeIs('beranda')" wire:navigate>
+                <flux:navlist.item icon="layout-grid" :href="route('dashboard')"
+                    :current="request() - > routeIs('dashboard')" wire:navigate>
                     {{ __('Beranda') }}
                 </flux:navlist.item>
 

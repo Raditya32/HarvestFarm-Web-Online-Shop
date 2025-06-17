@@ -361,7 +361,7 @@
             </div>
 
             <div class="buttons">
-                <a class="btn btn-primary" href="{{ route('beranda') }}">
+                <a class="btn btn-primary" href="{{ route('dashboard') }}">
                     Kembali ke Beranda
                 </a>
                 <a class="btn btn-secondary" href="{{ route('shop.show', ['shop' => $shop->id]) }}">

@@ -303,7 +303,7 @@
         @if (Route::has('login'))
             <div class="navbar">
                 @auth
-                    <a href="{{ route('beranda') }}" class="animate__animated animate__fadeIn animate__delay-1s">Back</a>
+                    <a href="{{ route('dashboard') }}" class="animate__animated animate__fadeIn animate__delay-1s">Back</a>
                 @else
                     <a href="{{ route('login') }}"
                         class="active animate__animated animate__fadeIn animate__delay-1s">Login</a>

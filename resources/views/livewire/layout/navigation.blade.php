@@ -18,7 +18,7 @@ $logout = function (Logout $logout) {
                 <div class="w-full flex justify-between items-center px-4 py-2">
                     <!-- KIRI: Logo dan Brand -->
                     <div class="flex items-center">
-                        <a href="{{ route('beranda') }}" wire:navigate>
+                        <a href="{{ route('dashboard') }}" wire:navigate>
                             <img src="{{ asset('build/assets/image/logo2.png') }}" alt="Logo" class="h-12 w-12">
                         </a>
                         <a style="color: #004d2c !important; font-weight: 1000; font-size: 23px;" wire:navigate
@@ -28,7 +28,7 @@ $logout = function (Logout $logout) {
                     </div>
 
                     <div class="hidden sm:flex items-center space-x-8">
-                        <x-nav-link :href="route('beranda')" :active="request()->routeIs('beranda')" wire:navigate class="px-3">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate class="px-3">
                             {{ __('Beranda') }}
                         </x-nav-link>
 
@@ -109,7 +109,7 @@ $logout = function (Logout $logout) {
             <!-- Responsive Navigation Menu -->
             <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
                 <div class="pt-2 pb-3 space-y-1">
-                    <x-responsive-nav-link :href="route('beranda')" :active="request()->routeIs('beranda')" wire:navigate>
+                    <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Beranda') }}
                     </x-responsive-nav-link>
                     @auth
