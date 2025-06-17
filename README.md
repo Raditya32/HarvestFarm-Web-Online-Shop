@@ -39,7 +39,7 @@ HarvestFarm adalah aplikasi e-commerce berbasis web yang dikembangkan menggunaka
 Berikut langkah-langkah untuk menjalankan proyek ini secara lokal:
 
 # 1. Clone repositori ini
-git clone https://github.com/Radit32/HarvestFarm-Web-Online-Shop.git
+git clone [https://github.com/Raditya32/HarvestFarm-Web-Online-Shop]
 cd HarvestFarm
 
 # 2. Install dependency
@@ -61,4 +61,4 @@ php artisan serve
 
 
 
-Dibuat oleh [Raditya Bagus Pradana] untuk tugas/proyek pengembangan aplikasi web e-commerce.
+# Dibuat oleh [Raditya Bagus Pradana] untuk tugas/proyek pengembangan aplikasi web e-commerce.
