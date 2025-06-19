@@ -189,6 +189,7 @@
             margin-top: 60px;
         }
 
+
         .value-item {
             text-align: center;
             padding: 30px 20px;
@@ -255,7 +256,6 @@
         .member-photo {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             position: relative;
             overflow: hidden;
         }
@@ -263,7 +263,6 @@
         .photo-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -277,7 +276,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%232E7D32" width="400" height="300"/><circle fill="%234CAF50" opacity="0.1" cx="100" cy="80" r="60"/><circle fill="%238BC34A" opacity="0.1" cx="300" cy="220" r="80"/><path fill="%23388E3C" opacity="0.2" d="M0,200 Q200,150 400,200 V300 H0 Z"/></svg>');
             background-size: cover;
         }
 
@@ -693,17 +691,14 @@
                 <div class="team-member fade-in-on-scroll">
                     <div class="member-photo">
                         <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                            </svg>
+                            <img src="{{ asset('build/assets/image/rifqi.jpg') }}">
                         </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Ahmad Rifqi Abdurrahman</h3>
                         <p class="member-role">Leader Team</p>
-                        <p class="member-desc">Specialist Business Idea in HarvestFarm E-Commerce platforms and
-                            UI/UX solutions.</p>
+                        <p class="member-desc">Business Ideas Specialize in HarvestFarm E-Commerce platform and UI/UX
+                            solutions.</p>
                         <div class="member-skills">
                             <span class="skill-tag">Figma</span>
                             <span class="skill-tag">Business Plan</span>
@@ -714,10 +709,9 @@
                 <div class="team-member fade-in-on-scroll">
                     <div class="member-photo">
                         <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                            </svg>
+                            <div class="photo-placeholder">
+                                <img src="{{ asset('build/assets/image/bayu.jpg') }}">
+                            </div>
                         </div>
                     </div>
                     <div class="member-info">
@@ -738,10 +732,9 @@
                 <div class="team-member fade-in-on-scroll">
                     <div class="member-photo">
                         <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                            </svg>
+                            <div class="photo-placeholder">
+                                <img src="{{ asset('build/assets/image/radit.jpg') }}">
+                            </div>
                         </div>
                     </div>
                     <div class="member-info">
@@ -855,7 +848,10 @@
 
                 parallaxElements.forEach(element => {
                     const speed = 0.5;
-                    element.style.transform = `translateY(${scrolled * speed}px)`;
+                    element.style.transform = translateY($ {
+                            scrolled * speed
+                        }
+                        px);
                 });
             });
 
@@ -947,15 +943,24 @@
 
             // Staggered animation for grid items
             document.querySelectorAll('.about-grid .about-card').forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
+                card.style.animationDelay = $ {
+                    index * 0.2
+                }
+                s;
             });
 
             document.querySelectorAll('.values-grid .value-item').forEach((item, index) => {
-                item.style.animationDelay = `${index * 0.1}s`;
+                item.style.animationDelay = $ {
+                    index * 0.1
+                }
+                s;
             });
 
             document.querySelectorAll('.team-grid .team-member').forEach((member, index) => {
-                member.style.animationDelay = `${index * 0.3}s`;
+                member.style.animationDelay = $ {
+                    index * 0.3
+                }
+                s;
             });
 
             // Dynamic background color change on scroll
@@ -971,7 +976,11 @@
                     const overlay = heroSection.querySelector('::before') || heroSection;
                     const opacity = Math.min(scrollPercent * 2, 0.7);
                     heroSection.style.background =
-                        `linear-gradient(rgba(0,0,0,${opacity}), rgba(0,0,0,${opacity})), url("{{ asset('build/assets/image/farm.jpg') }}")`;
+                        linear - gradient(rgba(0, 0, 0, $ {
+                            opacity
+                        }), rgba(0, 0, 0, $ {
+                            opacity
+                        })), url("{{ asset('build/assets/image/farm.jpg') }}");
                     heroSection.style.backgroundSize = 'cover';
                     heroSection.style.backgroundPosition = 'center';
                 }
