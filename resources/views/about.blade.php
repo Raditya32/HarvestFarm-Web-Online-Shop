@@ -189,6 +189,7 @@
             margin-top: 60px;
         }
 
+
         .value-item {
             text-align: center;
             padding: 30px 20px;
@@ -259,7 +260,6 @@
             overflow: hidden;
         }
 
-
         .photo-placeholder {
             width: 100%;
             height: 100%;
@@ -279,6 +279,13 @@
             background-size: cover;
         }
 
+        .photo-placeholder svg {
+            width: 80px;
+            height: 80px;
+            fill: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            position: relative;
+        }
 
         .member-info {
             padding: 25px;
@@ -684,16 +691,14 @@
                 <div class="team-member fade-in-on-scroll">
                     <div class="member-photo">
                         <div class="photo-placeholder">
-                            <div class="photo-placeholder">
-                                <img src="{{ asset('build/assets/image/rifqi.jpg') }}">
-                            </div>
+                            <img src="{{ asset('build/assets/image/rifqi.jpg') }}">
                         </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Ahmad Rifqi Abdurrahman</h3>
                         <p class="member-role">Leader Team</p>
-                        <p class="member-desc">Specialist Business Idea in HarvestFarm E-Commerce platforms and
-                            UI/UX solutions.</p>
+                        <p class="member-desc">Business Ideas Specialize in HarvestFarm E-Commerce platform and UI/UX
+                            solutions.</p>
                         <div class="member-skills">
                             <span class="skill-tag">Figma</span>
                             <span class="skill-tag">Business Plan</span>
@@ -843,10 +848,7 @@
 
                 parallaxElements.forEach(element => {
                     const speed = 0.5;
-                    element.style.transform = translateY($ {
-                            scrolled * speed
-                        }
-                        px);
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
                 });
             });
 
@@ -938,24 +940,15 @@
 
             // Staggered animation for grid items
             document.querySelectorAll('.about-grid .about-card').forEach((card, index) => {
-                card.style.animationDelay = $ {
-                    index * 0.2
-                }
-                s;
+                card.style.animationDelay = `${index * 0.2}s`;
             });
 
             document.querySelectorAll('.values-grid .value-item').forEach((item, index) => {
-                item.style.animationDelay = $ {
-                    index * 0.1
-                }
-                s;
+                item.style.animationDelay = `${index * 0.1}s`;
             });
 
             document.querySelectorAll('.team-grid .team-member').forEach((member, index) => {
-                member.style.animationDelay = $ {
-                    index * 0.3
-                }
-                s;
+                member.style.animationDelay = `${index * 0.3}s`;
             });
 
             // Dynamic background color change on scroll
@@ -971,11 +964,7 @@
                     const overlay = heroSection.querySelector('::before') || heroSection;
                     const opacity = Math.min(scrollPercent * 2, 0.7);
                     heroSection.style.background =
-                        linear - gradient(rgba(0, 0, 0, $ {
-                            opacity
-                        }), rgba(0, 0, 0, $ {
-                            opacity
-                        })), url("{{ asset('build/assets/image/farm.jpg') }}");
+                        `linear-gradient(rgba(0,0,0,${opacity}), rgba(0,0,0,${opacity})), url("{{ asset('build/assets/image/farm.jpg') }}")`;
                     heroSection.style.backgroundSize = 'cover';
                     heroSection.style.backgroundPosition = 'center';
                 }
